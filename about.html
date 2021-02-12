@@ -1,0 +1,181 @@
+<!DOCUTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Average Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'>
+<style>
+
+body {
+  margin: 0px 0px;
+}
+
+.contentlist {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  background: #333;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.closebtn a:not(.hover) {
+  position: absolute;
+  top: 0.5%;
+  right: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.closebtn a:hover {
+  transition: all 0.1s linear;
+  background-color: #111;
+  text-shadow: 1px 1px 12px white;
+}
+
+.openbtn {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #BFC25F;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #BFC25F;
+  transition: all 0.1s linear;
+  text-shadow: 1px 1px 12px black;
+}
+
+.contentlistitems a {
+  display: block;
+  font-family: 'Average Sans';
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 15px 12px 15px; <!-- first parameter is padding from top, second parameter is padding from left of page, third parameter is padding from bottom, if 
+                                third parameter is not specified, padding from first parameter applies to bottom padding as well-->
+}
+
+.contentlistitems a.active {
+  background-color: #BFC25F;
+  color: black;
+}
+
+.contentlistitems a.testexception {
+  background-color: black;
+}
+
+.contentlistitems a.home:hover {
+  transition: all 0.7s linear;
+  background: #0CB092;
+  color: white;
+}
+
+.contentlistitems a.programmes:hover {
+  transition: all 0.7s linear;
+  background: #D69D47;
+  color: black;
+}
+
+.contentlistitems a.pricing:hover {
+  transition: all 0.7s linear;
+  background: #8A6ECC;
+  color: white;
+}
+
+.contentlistitems a.contactus:hover {
+  transition: all 0.7s linear;
+  background: #A64E23;
+  color: white;
+}
+
+.main {
+  transition: margin-left 0.8s;
+  padding: 16px;
+}
+
+.div-1 {
+  margin: 0 auto;
+  background-color: #BFC25F;
+  line-height: 1.5;
+  color: black;
+  padding-left: 15px;
+}
+
+.div-2 {
+  margin-top: -26;
+  margin-bottom: -26;
+  background-color: #CACD7A;
+  line-height: 1.5;
+  color: black;
+  padding-left: 15px;
+  height:80%;
+}
+
+</style>
+</head>
+<body>
+
+<div id="maincontentlist" class="contentlist">
+  <div id="closefunction" class="closebtn">
+    <closebtn><a href="javascript:void(0)" onclick="closeNav()">×</a></closebtn>
+  </div>
+  <div id="itemslist" class="contentlistitems">
+    <contentlistitems><a class="testexception"; target="_self" href="index.html"><img src="thegympodlogo.png" alt="The Gym Pod" width="139" height="176"></a></contentlistitems> <!-- new class created to remove hover -->
+    <contentlistitems><a class="home"; target="_self" href="index.html">HOME</a></contentlistitems>  <!-- removal of a href removes hyperlink -->
+    <contentlistitems><a class="programmes"; target="_self" href="programmes.html">PROGRAMMES</a></contentlistitems> <!-- target="_self" forces opening in same tab -->
+    <contentlistitems><a class="pricing"; target="_self" href="pricing.html">PRICING</a></contentlistitems>
+    <contentlistitems><a class="contactus"; target="_self" href="contactus.html">CONTACT US</a></contentlistitems>
+    <contentlistitems><a class="active">ABOUT</a></contentlistitems>
+  </div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("maincontentlist").style.width = "100%";
+  document.getElementById("main").style.marginLeft = "0px";
+}
+
+function closeNav() {
+  document.getElementById("maincontentlist").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<div class="div-1">
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+  </div>
+  <h1 style="font-family:Calistoga;font-size:40px">The Gym Pod Mission</h1>
+  <p style="font-family:Bitter;font-size:25px">The Gym Pod’s mission is to provide the space, tools, and knowledge for anyone to exercise and get fit. Whether you’re a beginner who wants to #JustGetStarted or already a fitness professional, we welcome you to enjoy the most private workout you’ll ever get!</p>
+  <br>
+</div>
+
+<div class="div-2">
+  <h1 style="font-family:Calistoga;font-size:40px">Our Values</h1>
+  <p style="font-family:Bitter;font-size:30px"><u>Innovation</u></p>
+  <p style="font-family:Bitter;font-size:25px">We use technology to continuously make fitness easier and more accessible for you. Through our automated pods, our app, and unique ways of training, we will always aim to deliver innovative fitness solutions.</p>
+  <p style="font-family:Bitter;font-size:30px"><u>Progress</u></p>
+  <p style="font-family:Bitter;font-size:25px">Everyone’s fitness journey is different, and it’s not always easy. No matter what roadblocks may come along the way, we are here to help you grow in the right direction.</p>
+  <p style="font-family:Bitter;font-size:30px"><u>Privacy</u></p>
+  <p style="font-family:Bitter;font-size:25px">Some people are more comfortable working out behind closed doors. Others just hate queueing for equipment. We want to give you the space to workout in without any unnecessary distractions.</p>
+  <p style="font-family:Bitter;font-size:30px"><u>Respect</u></p>
+  <p style="font-family:Bitter;font-size:25px">Whether you’ve never step foot inside a gym before, or you’re training for your next marathon, we welcome all to our Gym Pod community and treat everyone with the same respect.</p>
+  <br>
+</div>
+
+</body>
+</html>

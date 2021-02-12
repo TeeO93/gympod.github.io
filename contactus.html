@@ -1,0 +1,227 @@
+<!DOCUTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Average Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'>
+<style>
+
+body {
+  margin: 0px 0px;
+}
+
+.contentlist {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  background: #333;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.closebtn a:not(.hover) {
+  position: absolute;
+  top: 0.5%;
+  right: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.closebtn a:hover {
+  transition: all 0.1s linear;
+  background-color: #111;
+  text-shadow: 1px 1px 12px white;
+}
+
+.openbtn {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #A64E23;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #A64E23;
+  transition: all 0.1s linear;
+  text-shadow: 1px 1px 12px white;
+}
+
+.contentlistitems a {
+  display: block;
+  font-family: 'Average Sans';
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 15px 12px 15px; <!-- first parameter is padding from top, second parameter is padding from left of page, third parameter is padding from bottom, if 
+                                third parameter is not specified, padding from first parameter applies to bottom padding as well-->
+}
+
+.contentlistitems a.active {
+  background-color: #A64E23;
+  color: white;
+}
+
+.contentlistitems a.testexception {
+  background-color: black;
+}
+
+.contentlistitems a.home:hover {
+  transition: all 0.7s linear;
+  background: #0CB092;
+  color: white;
+}
+
+.contentlistitems a.programmes:hover {
+  transition: all 0.7s linear;
+  background: #D69D47;
+  color: black;
+}
+
+.contentlistitems a.pricing:hover {
+  transition: all 0.7s linear;
+  background: #8A6ECC;
+  color: white;
+}
+
+.contentlistitems a.about:hover {
+  transition: all 0.7s linear;
+  background: #BFC25F;
+  color: black;
+}
+
+.main {
+  transition: margin-left 0.8s;
+  padding: 16px;
+}
+
+.div-1 {
+  margin: 0 auto;
+  background-color: #A64E23;
+  line-height: 1.5;
+  color: white;
+  padding-left: 15px;
+}
+
+.div-2 {
+  margin-top: -26;
+  margin-bottom: -26;
+  background-color: #B95827;
+  line-height: 1.5;
+  color: white;
+  padding-left: 15px;
+}
+
+.div-3 {
+  margin-top: -26;
+  margin-bottom: -26;
+  background-color: #CA602B;
+  line-height: 1.5;
+  color: white;
+  padding-left: 15px;
+}
+
+
+.div-4 {
+  margin-top: -26;
+  margin-bottom: -26;
+  background-color: #D46A35;
+  line-height: 1.5;
+  color: white;
+  padding-left: 15px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="maincontentlist" class="contentlist">
+  <div id="closefunction" class="closebtn">
+    <closebtn><a href="javascript:void(0)" onclick="closeNav()">×</a></closebtn>
+  </div>
+  <div id="itemslist" class="contentlistitems">
+    <contentlistitems><a class="testexception"; target="_self" href="index.html"><img src="thegympodlogo.png" alt="The Gym Pod" width="139" height="176"></a></contentlistitems> <!-- new class created to remove hover -->
+    <contentlistitems><a class="home"; target="_self" href="index.html">HOME</a></contentlistitems>  <!-- removal of a href removes hyperlink -->
+    <contentlistitems><a class="programmes"; target="_self" href="programmes.html">PROGRAMMES</a></contentlistitems> <!-- target="_self" forces opening in same tab -->
+    <contentlistitems><a class="pricing"; target="_self" href="pricing.html">PRICING</a></contentlistitems>
+    <contentlistitems><a class="active">CONTACT US</a></contentlistitems>
+    <contentlistitems><a class="about"; target="_self" href="about.html">ABOUT</a></contentlistitems>
+  </div>
+
+</div>
+
+<div class="div-1">
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+  </div>
+  <h1 style="font-family:Calistoga;font-size:40px">Location </h1>
+  <iframe style="border: 0;" tabindex="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8267823912392!2d103.79932061475394!3d1.2773935990683112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1b7f666d13ed%3A0xd4382d0db268233e!2sThe%20Gym%20Pod%20%40%20Alexandra%20Technopark!5e0!3m2!1sen!2ssg!4v1597418584132!5m2!1sen!2ssg" width="600" height="450" frameborder="2" allowfullscreen="allowfullscreen" aria-hidden="false"></iframe>
+  <p style="font-family:Bitter;font-size:25px">438A Alexandra Road, Singapore 119967</p>
+  <br>
+</div>
+
+<div class="div-2">
+  <h1 style="font-family:Calistoga;font-size:40px">Public Transport </h1>
+  <p style="font-family:Bitter;font-size:25px">Walk from Labrador Park MRT (Circle Line) – approximately 10-15 mins</p>
+  <p style="font-family:Bitter;font-size:25px">Public Bus Stop #15051 or #15059: 51, 57, 61, 93, 97, 97e, 100, 120, 166, 175, 963, 963e</p>
+  <p style="font-family:Bitter;font-size:25px">From the Main Road / Bus Stop, walk towards and make use of the Alexandra Pedestrian Underpass</p>
+  <p style="font-family:Bitter;font-size:25px">Upon exiting the Underpass, walk towards the office building (ATP block A) and you will see the Pod on your right</p>
+  <br>
+</div>
+
+<div class="div-3">
+  <h1 style="font-family:Calistoga;font-size:40px">Parking Nearby </h1>
+  <p style="font-family:Bitter;font-size:30px">Park at Alexandra Technopark Tower B</p>
+  <p style="font-family:Bitter;font-size:30px"><u>Motorcar Parking Fees</u></p>
+  <p style="font-family:Bitter;font-size:25px">Mon-Fri, 7am to 5pm: $1 per hour or part thereof | 5pm onward: $2 per entry</p>
+  <p style="font-family:Bitter;font-size:25px">Sat, 7am to 1pm: $1 per hour or part thereof | 1pm onward: $2 per entry</p>
+  <p style="font-family:Bitter;font-size:25px">Sun & Public Holidays: $3 per entry</p>
+  <p style="font-family:Bitter;font-size:25px">Grace Period: 10min</p>
+  <p style="font-family:Bitter;font-size:30px"><u>Motorcycle Parking Fees</u></p>
+  <p style="font-family:Bitter;font-size:25px">$0.60 for whole day</p>
+  <p style="font-family:Bitter;font-size:30px"><u>Commercial Vehicles Parking Fees</u></p>
+  <p style="font-family:Bitter;font-size:25px">Mon-Fri, 7am to 5pm: $1 per hour or part thereof | 5pm onward: $2 per entry</p>
+  <p style="font-family:Bitter;font-size:25px">Sat, 7am to 1pm: $1 per hour or part thereof | 1pm onward: $2 per entry</p>
+  <p style="font-family:Bitter;font-size:25px">First hour free. Every subsequent hour $1 or part thereof</p>
+  <p style="font-family:Bitter;font-size:25px">Sun & Public Holidays: Free</p>
+</div>
+
+<div class="div-4">
+  <h1 style="font-family:Calistoga;font-size:40px">Social Media and Email </h1>
+  <p style="font-family:Bitter;font-size:30px"><u>Headquarters</u></p>
+  <p style="font-family:Bitter;font-size:25px">GENERAL MAGNETICS BUILDING <br>
+625 LORONG 4 TOA PAYOH, #05-01 <br>
+SINGAPORE 319519</p>
+  <p style="font-family:Bitter;font-size:30px"><u>Email</u></p>
+  <p style="font-family:Bitter;font-size:25px">support@thegympod.com</p>
+  <p style="font-family:Bitter;font-size:30px"><a href="https://www.facebook.com/thegympod">Facebook</a></p>
+  <p style="font-family:Bitter;font-size:30px"><a href="https://www.instagram.com/thegympod/">Instagram</a></p>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("maincontentlist").style.width = "100%";
+  document.getElementById("main").style.marginLeft = "0px";
+}
+
+function closeNav() {
+  document.getElementById("maincontentlist").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCUTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Average Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'>
+<style>
+
+body {
+  margin: 0px 0px;
+}
+
+.contentlist {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  background: #333;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.closebtn a:not(.hover) {
+  position: absolute;
+  top: 0.5%;
+  right: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.closebtn a:hover {
+  transition: all 0.1s linear;
+  background-color: #111;
+  text-shadow: 1px 1px 12px white;
+}
+
+.openbtn {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #D69D47;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #D69D47;
+  transition: all 0.1s linear;
+  text-shadow: 1px 1px 12px black;
+}
+
+.contentlistitems a {
+  display: block;
+  font-family: 'Average Sans';
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 15px 12px 15px; <!-- first parameter is padding from top, second parameter is padding from left of page, third parameter is padding from bottom, if 
+                                third parameter is not specified, padding from first parameter applies to bottom padding as well-->
+}
+
+.contentlistitems a.active {
+  background-color: #D69D47;
+  color: black;
+}
+
+.contentlistitems a.testexception {
+  background-color: black;
+}
+
+.contentlistitems a.home:hover {
+  transition: all 0.7s linear;
+  background: #0CB092;
+  color: white;
+}
+
+.contentlistitems a.pricing:hover {
+  transition: all 0.7s linear;
+  background: #8A6ECC;
+  color: white;
+}
+
+.contentlistitems a.contactus:hover {
+  transition: all 0.7s linear;
+  background: #A64E23;
+  color: white;
+}
+
+.contentlistitems a.about:hover {
+  transition: all 0.7s linear;
+  background: #BFC25F;
+  color: black;
+}
+
+.main {
+  transition: margin-left 0.8s;
+  padding: 16px;
+}
+
+.div-1 {
+  margin: 0 auto;
+  background-color: #D69D47;
+  line-height: 1.5;
+  color: black;
+  padding-left: 15px;
+}
+
+.div-2 {
+  margin-top: -26;
+  margin-bottom: -26;
+  background-color: #DAA658;
+  line-height: 1.5;
+  color: black;
+  padding-left: 15px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="maincontentlist" class="contentlist">
+  <div id="closefunction" class="closebtn">
+    <closebtn><a href="javascript:void(0)" onclick="closeNav()">×</a></closebtn>
+  </div>
+  <div id="itemslist" class="contentlistitems">
+    <contentlistitems><a class="testexception"; target="_self" href="index.html"><img src="thegympodlogo.png" alt="The Gym Pod" width="139" height="176"></a></contentlistitems> <!-- new class created to remove hover -->
+    <contentlistitems><a class="home"; target="_self" href="index.html">HOME</a></contentlistitems>  <!-- removal of a href removes hyperlink -->
+    <contentlistitems><a class="active">PROGRAMMES</a></contentlistitems> <!-- target="_self" forces opening in same tab -->
+    <contentlistitems><a class="pricing"; target="_self" href="pricing.html">PRICING</a></contentlistitems>
+    <contentlistitems><a class="contactus"; target="_self" href="contactus.html">CONTACT US</a></contentlistitems>
+    <contentlistitems><a class="about"; target="_self" href="about.html">ABOUT</a></contentlistitems>
+  </div>
+
+</div>
+
+<div class="div-1">
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+  </div>
+  <h1 style="font-family:Calistoga;font-size:40px">Equipment Available at the Gym Pod</h1>
+ <figure>
+  <img src="alexandratechnopark1.jpg" width="630" height="332" alt="Free Weights and Chin-up Bar" title="Free Weights and Chin-up Bar">
+    <figcaption style="font-family:Cabin;color:black; text-align:left; font-size:15px"> <b><em>Free Weights and Chin-up Bar</em></b>
+      </figcaption>
+ </figure>
+ <figure>
+  <img src="alexandratechnopark2.jpg" width="630" height="332" alt="Exercise Bike and Treadmill" title="Exercise Bike and Treadmill">
+    <figcaption style="font-family:Cabin;color:black; text-align:left; font-size:15px"> <b><em>Exercise Bike and Treadmill</em></b>
+      </figcaption>
+ </figure>
+  <p style="font-family:Bitter;font-size:25px"> Some of the equipment available include dumbbells (1kg to 20kg), Smith Machine with weight plates (0.25kg to 20kg), an adjustable exercise bench, a stacked-weight cross cable machine, lat pulldown bar attachment, knee rest for lat pull down attachment, 
+rope attachment, dip bar attachment, chin up bar, treadmill, exercise bike and yoga mat.</p>
+ <figure>
+  <img src="alexandratechnopark3.jpg" width="630" height="332" alt="Adjustable Exercise Bench" title="Adjustable Exercise Bench">
+    <figcaption style="font-family:Cabin;color:black; text-align:left; font-size:15px"> <b><em>Adjustable Exercise Bench</em></b>
+      </figcaption>
+ </figure>
+</div>
+
+<div class="div-2">
+  <h1 style="font-family:Calistoga;font-size:40px">Other Amenities Available</h1>
+  <p style="font-family:Bitter;font-size:25px"> Available for public use: warm showers at Alexandra Technopark Block B, Level 1, Lobby 3.</p>
+  <p style="font-family:Bitter;font-size:25px"> Alexandra Technopark tenants and members (open for public registration): warm showers equipped with lockers, towels, hair dryer, hangers at Block B beside Futsal courts. Please approach the Alexandra Technopark counter for registration info.</p>
+  <p style="font-family:Bitter;font-size:25px"> Other amenities include F&B joints, AXS stations, small grocers, and ATMs. </p>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("maincontentlist").style.width = "100%";
+  document.getElementById("main").style.marginLeft = "0px";
+}
+
+function closeNav() {
+  document.getElementById("maincontentlist").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>

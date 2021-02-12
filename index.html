@@ -1,0 +1,167 @@
+<!DOCUTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Average Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'>
+<style>
+
+body {
+  margin: 0px 0px;
+}
+
+.contentlist {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  background: #333;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.closebtn a:not(.hover) {
+  position: absolute;
+  top: 0.5%;
+  right: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.closebtn a:hover {
+  transition: all 0.1s linear;
+  background-color: #111;
+  text-shadow: 1px 1px 12px white;
+}
+
+.openbtn {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #0CB092;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #0CB092;
+  transition: all 0.1s linear;
+  text-shadow: 1px 1px 12px white;
+}
+
+.contentlistitems a {
+  display: block;
+  font-family: 'Average Sans';
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 15px 12px 15px; <!-- first parameter is padding from top, second parameter is padding from left of page, third parameter is padding from bottom, if 
+                                third parameter is not specified, padding from first parameter applies to bottom padding as well-->
+}
+
+.contentlistitems a.active {
+  background-color: #0CB092;
+  color: white;
+}
+
+.contentlistitems a.testexception {
+  background-color: black;
+}
+
+.contentlistitems a.programmes:hover {
+  transition: all 0.7s linear;
+  background: #D69D47;
+  color: black;
+}
+
+.contentlistitems a.pricing:hover {
+  transition: all 0.7s linear;
+  background: #8A6ECC;
+  color: white;
+}
+
+.contentlistitems a.contactus:hover {
+  transition: all 0.7s linear;
+  background: #A64E23;
+  color: white;
+}
+
+.contentlistitems a.about:hover {
+  transition: all 0.7s linear;
+  background: #BFC25F;
+  color: black;
+}
+
+.main {
+  transition: margin-left 0.8s;
+  padding: 16px;
+}
+
+.div-1 {
+  background-color: #0CB092;
+  color: white;
+  padding-left: 15px;
+  height: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<div id="maincontentlist" class="contentlist">
+  <div id="closefunction" class="closebtn">
+    <closebtn><a href="javascript:void(0)" onclick="closeNav()">×</a></closebtn>
+  </div>
+  <div id="itemslist" class="contentlistitems">
+    <contentlistitems><a class="testexception"><img src="thegympodlogo.png" alt="The Gym Pod" width="139" height="176"></a></contentlistitems> <!-- new class created to remove hover -->
+    <contentlistitems><a class="active">HOME</a></contentlistitems>  <!-- removal of a href removes hyperlink -->
+    <contentlistitems><a class="programmes"; target="_self" href="programmes.html">PROGRAMMES</a></contentlistitems> <!-- target="_self" forces opening in same tab -->
+    <contentlistitems><a class="pricing"; target="_self" href="pricing.html">PRICING</a></contentlistitems>
+    <contentlistitems><a class="contactus"; target="_self" href="contactus.html">CONTACT US</a></contentlistitems>
+    <contentlistitems><a class="about"; target="_self" href="about.html">ABOUT</a></contentlistitems>
+  </div>
+
+</div>
+
+<div class="div-1">
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+  </div>
+  <h1 style="font-family:Calistoga;font-size:40px">The Alexandra Technopark Gym Pod</h1>
+ <figure>
+  <img src="alexandratechnopark5.jpg" width="630" height="332" alt="Alexandra Technopark Exterior View" title="Alexandra Technopark Exterior View">
+    <figcaption style="font-family:Cabin;color:white; text-align:left; font-size:15px"> <b><em>Exterior view of the Alexandra Technopark Gym Pod</em></b>
+      </figcaption>
+ </figure>
+  <p style="font-family:Bitter;font-size:25px"> Built after the first Gym Pod @ Ayer Rajah Crescent, it contains more equipment, is more spacious, and is be located at the heart of the Alexandra business corridor, being about 25% larger than the first Gym Pod.</p>
+  <p style="font-family:Bitter;font-size:25px"> Same privacy, convenience and peace of mind – for tenants and passerby’s within the Alexandra Technopark area!</p>
+ <figure>
+  <img class="one" src="alexandratechnopark4.jpg" width="630" height="332" alt="Alexandra Technopark Exterior View" title="Alexandra Technopark Exterior View">
+    <figcaption style="font-family:Cabin;color:white; text-align:left; font-size:15px"> <b><em>Another photo of the exterior view of the Alexandra Technopark Gym Pod</em></b>
+      </figcaption>
+ </figure>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("maincontentlist").style.width = "100%";
+  document.getElementById("main").style.marginLeft = "0px";
+}
+
+function closeNav() {
+  document.getElementById("maincontentlist").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>
